@@ -1,0 +1,78 @@
+<div>
+    <mat-toolbar class="d-flex justify-content-between container-fluid menuprincipal">
+      <div class="d-flex header-section align-items-center">
+        <a [routerLink]="['/','home']">
+          <img src="" class="logo" matTooltip="">
+        </a>
+       
+        <mat-toolbar class="mat-fab-custom">
+          <button mat-icon-button [matMenuTriggerFor]="miniMenu" matTooltip="menu principal">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>MENU</span>
+        </mat-toolbar>
+   
+        <mat-menu>
+   
+        </mat-menu>
+   
+        <mat-menu #miniMenu="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="Despesa">
+            <span>Despesa</span>
+          </button>
+   
+          <button mat-menu-item [matMenuTriggerFor]="Receita">
+            <span>Receita</span>
+          </button>
+   
+          <button mat-menu-item [matMenuTriggerFor]="menuControleAcesso">
+            <span>Controle Acesso</span>
+          </button>
+   
+   
+   
+   
+        </mat-menu>
+        <mat-menu #Despesa="matMenu">
+         
+          <button mat-menu-item [routerLink]="['/','despesa','lista']">
+            <span>despesa</span>
+          </button>
+   
+        </mat-menu>
+   
+        <mat-menu #Receita="matMenu">
+          <button mat-menu-item [routerLink]="['/','receita','lista']">
+            <span>receita</span>
+          </button>
+   
+        </mat-menu>
+   
+        <mat-menu #menuControleAcesso="matMenu">
+            <button mat-menu-item [routerLink]="['/','usuario','lista']">
+              <span>usuario</span>
+            </button>
+
+            <mat-divider></mat-divider>
+            <button mat-menu-item [routerLink]="['/','permissao','lista']">
+              <span>permissão</span>
+            </button>
+        </mat-menu>
+      </div>
+   
+    </mat-toolbar>
+   
+   
+    <div class="container-fluid">
+      <div [class.desenv-style]="" class="row">
+        <!-- <div class="col-2" id="area-menu-lateral" style="background-color: blue;">
+   
+        </div> -->
+        <div class="col-12">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+   
