@@ -1,0 +1,30 @@
+<div class="row header-page">
+    <div class="col text-center">
+        <h1 class="m1">Relação de Usuários</h1>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <h2 id="titulo-filtro">Filtros</h2>
+    <form [formGroup]="formFiltro">
+        <div class="row">
+            <div class="col-3 processo">
+                <mat-form-field class="custom-select">
+                    <mat-label>Nome do usuário</mat-label>
+                    <input type="text" matInput
+                     formControlName="nomeUsuario" [matAutoComplete]="autoResp">
+                     <mat-autocomplete autoActiveFirstOption
+                      #autoResp="matAutoComplete" [displayWidth]="ObterUsuario"
+                      (optionsSelected)="aplicarFiltro()">
+                    <mat-option>&lt;&lt;Selecione&lt;&lt;</mat-option>
+                    <mat-option *ngFor="let item of usuarioFiltro" [value]="item">
+                        {{item?.nome}}
+                    </mat-option>
+                    </mat-autocomplete>
+
+                    <span class="dropdown-icon"></span>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</div>
