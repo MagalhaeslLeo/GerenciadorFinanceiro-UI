@@ -3,14 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch:'full'},
-  {
-    path: 'despesa',
-    loadChildren: () => import('./modules/despesa/despesa.module').then(d=>d.DespesaModule)
-  },
-   {
-     path: 'receita',
-     loadChildren: () => import('./modules/receita/receita.module').then(r=>r.ReceitaModule)
-   }
+  // {
+  //   path: 'despesa',
+  //   loadChildren: () => import('./modules/despesa/despesa.module').then(d=>d.DespesaModule)
+  // },
+  //  {
+  //    path: 'receita',
+  //    loadChildren: () => import('./modules/receita/receita.module').then(r=>r.ReceitaModule)
+  //  }
 ];
 
 @NgModule({
