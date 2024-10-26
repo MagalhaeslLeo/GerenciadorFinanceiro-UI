@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DespesaCadComponent } from './components/despesaCad/despesaCad.component';
+import { ReceitaCadComponent } from './Components/receitaCad/receitaCad.component';
+
 
 const routes: Routes = [
   {
-    path: "lista",
-    component: DespesaCadComponent,
+    path:"lista",
+    component: ReceitaCadComponent,
     //canActivate: [AutGuard]
   }
 ];
@@ -14,4 +15,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DespesaRoutingModule { }
+export class ReceitaRoutingModule { }

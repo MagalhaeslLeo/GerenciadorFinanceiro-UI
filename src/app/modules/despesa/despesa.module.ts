@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DespesaRoutingModule } from './despesa.routing.module';
-import { DespesaCadComponent } from './components/despesaCad/despesa-cad/despesaCad.component';
+import { DespesaCadComponent } from './components/despesaCad/despesaCad.component';
 
 
 

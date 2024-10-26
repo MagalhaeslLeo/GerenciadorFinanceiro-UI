@@ -1,22 +1,16 @@
 <div>
-    <mat-toolbar class="d-flex justify-content-between container-fluid menuprincipal">
+    <mat-toolbar class="d-flex justify-content-between container-fluid menuPrincipal">
       <div class="d-flex header-section align-items-center">
         <a [routerLink]="['/','home']">
           <img src="" class="logo" matTooltip="">
         </a>
        
-        <mat-toolbar class="mat-fab-custom">
-          <button mat-icon-button [matMenuTriggerFor]="miniMenu" matTooltip="menu principal">
+
+          <button mat-mini-fab class="btn-menu" [matMenuTriggerFor]="miniMenu" matTooltip="menu principal">
             <mat-icon>menu</mat-icon>
           </button>
-          <span>MENU</span>
-        </mat-toolbar>
-   
-        <mat-menu>
-   
-        </mat-menu>
-   
-        <mat-menu #miniMenu="matMenu">
+            
+        <mat-menu #miniMenu="matMenu" class="btn-menu">
           <button mat-menu-item [matMenuTriggerFor]="Despesa">
             <span>Despesa</span>
           </button>
@@ -33,7 +27,7 @@
    
    
         </mat-menu>
-        <mat-menu #Despesa="matMenu">
+        <mat-menu class="btn-menu" #Despesa="matMenu">
          
           <button mat-menu-item [routerLink]="['/','despesa','lista']">
             <span>despesa</span>
@@ -41,14 +35,14 @@
    
         </mat-menu>
    
-        <mat-menu #Receita="matMenu">
+        <mat-menu class="btn-menu" #Receita="matMenu">
           <button mat-menu-item [routerLink]="['/','receita','lista']">
             <span>receita</span>
           </button>
    
         </mat-menu>
    
-        <mat-menu #menuControleAcesso="matMenu">
+        <mat-menu class="btn-menu" #menuControleAcesso="matMenu">
             <button mat-menu-item [routerLink]="['/','usuario','lista']">
               <span>usuario</span>
             </button>
