@@ -12,10 +12,10 @@
                 <mat-form-field class="custom-select">
                     <mat-label>Nome do usuário</mat-label>
                     <input type="text" matInput
-                     formControlName="nomeUsuario" [matAutoComplete]="autoResp">
+                     formControlName="nomeUsuario" [matAutocomplete]="autoResp">
                      <mat-autocomplete autoActiveFirstOption
-                      #autoResp="matAutoComplete" [displayWidth]="ObterUsuario"
-                      (optionsSelected)="aplicarFiltro()">
+                      #autoResp="matAutocomplete" [displayWith]="obterUsuario"
+                      (optionsSelected)="AplicarFiltro()">
                     <mat-option>&lt;&lt;Selecione&lt;&lt;</mat-option>
                     <mat-option *ngFor="let item of usuarioFiltro" [value]="item">
                         {{item?.nome}}

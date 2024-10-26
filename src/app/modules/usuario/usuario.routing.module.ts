@@ -1,11 +1,11 @@
 import { RouterModule, Routes } from "@angular/router";
-import { UsuarioCadComponent } from "./components/usuarioCad.component";
 import { NgModule } from "@angular/core";
+import { UsuarioListaPage } from "./pages/usuarioLista/usuarioLista.page";
 
 const routes: Routes = [
     {
         path: "lista",
-        component: UsuarioCadComponent,
+         component: UsuarioListaPage,
         // canActivate: [AuthGuard]
 
     }
