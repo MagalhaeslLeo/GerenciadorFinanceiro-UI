@@ -12,6 +12,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
+import { FlexLayoutModule } from "@angular/flex-layout";
 // import { PickListModule } from 'primeng/picklist';
 
 
@@ -33,7 +34,8 @@ import { MatAutocompleteModule } from "@angular/material/autocomplete";
         MatInputModule,
         MatTooltipModule,
         MatDividerModule,
-        MatAutocompleteModule
+        MatAutocompleteModule,
+        FlexLayoutModule
         // PickListModule
      ],
     providers: []
