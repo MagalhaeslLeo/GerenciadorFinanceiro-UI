@@ -139,34 +139,36 @@ cabecalhotabelacrudcustom{
 // }
 
 .processo{
-   
-  .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
-      padding-right: 0;
-      height: 33.99px;
-    }
+   display: inline;
+
+
+  // .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+  //     padding-right: 0;
+  //     height: 33.99px;
+  //   }
     
-    .mat-mdc-form-field-icon-suffix, [dir=rtl] .mat-mdc-form-field-icon-prefix{
-      height: 33.99px;
-      top: -11px;
-    }
+  //   .mat-mdc-form-field-icon-suffix, [dir=rtl] .mat-mdc-form-field-icon-prefix{
+  //     height: 33.99px;
+  //     top: -11px;
+  //   }
     
-    .mat-mdc-form-field-infix {
-      min-height: 33.99px;
-      height: 100%;
-    }
+  //   .mat-mdc-form-field-infix {
+  //     min-height: 33.99px;
+  //     height: 100%;
+  //   }
     
-    .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
-      padding-top: 9px;
-      padding-bottom: 0px;
-    }
+  //   .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+  //     padding-top: 9px;
+  //     padding-bottom: 0px;
+  //   }
     
-    .mat-mdc-icon-button.mat-mdc-button-base{
-      --mdc-icon-button-state-layer-size: 20px;
-      padding: 6px;
-      height: 33.99px;
-      width: 33.99px;
-      top: 10px;
-    }
+  //   .mat-mdc-icon-button.mat-mdc-button-base{
+  //     --mdc-icon-button-state-layer-size: 20px;
+  //     padding: 6px;
+  //     height: 33.99px;
+  //     width: 33.99px;
+  //     top: 10px;
+  //   }
 }
 
 
