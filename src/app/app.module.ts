@@ -13,6 +13,11 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { SharedModule } from './shared/shared.module';
+import { EnvService } from './core/env.service';
+import { User } from './core/user';
+import { Utils } from './core/utils';
+import { ServiceUtil } from './core/serviceUtil';
  
 @NgModule({
   declarations: [
@@ -32,10 +37,16 @@ import {MatButtonModule} from '@angular/material/button';
     MatButtonModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
+    SharedModule
  
    
   ],
-  providers: [],
+  providers: [
+    EnvService,
+    User,
+    Utils,
+    ServiceUtil
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

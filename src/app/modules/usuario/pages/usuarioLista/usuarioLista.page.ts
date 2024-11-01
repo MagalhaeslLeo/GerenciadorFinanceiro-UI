@@ -14,6 +14,7 @@ export class UsuarioListaPage implements OnInit {
     //Área de atributos, objetos e variáveis
     usuarioFiltro: any[] = [];
     formFiltro: FormGroup;
+    filtroTodosUsuarios: any[] = [];
 
     constructor( 
         protected router : Router,
@@ -21,7 +22,7 @@ export class UsuarioListaPage implements OnInit {
         protected utils : Utils
     ){
         this.formFiltro = this.CriarForm();
-        this.utils.tratarAutoCompleteEntidade(this.formFiltro.controls['obterUsuario'],
+        this.utils.tratarAutoCompleteEntidade(this.formFiltro.controls['nomeUsuario'],
             this.formFiltro.controls['idUsuario'], this.aplicarFiltroUsuario.bind(this), 0);
     }
 
@@ -43,8 +44,11 @@ export class UsuarioListaPage implements OnInit {
         
     }
 
-    aplicarFiltroUsuario(){
-
+    aplicarFiltroUsuario(pUsuario : any){
+        this.usuarioFiltro = this.filtroTodosUsuarios.filter(f=>{
+            const usuarioString = `${f.nome}`;
+            return usuarioString.includes(pUsuario);
+        });
     }
 
     obterUsuario(pEntidade:any): any{

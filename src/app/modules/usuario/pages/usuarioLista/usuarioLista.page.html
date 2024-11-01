@@ -16,7 +16,7 @@
                      <mat-autocomplete autoActiveFirstOption
                       #autoResp="matAutocomplete" [displayWith]="obterUsuario"
                       (optionsSelected)="AplicarFiltro()">
-                    <mat-option>&lt;&lt;Selecione&lt;&lt;</mat-option>
+                    <mat-option>&lt;&lt;Selecione&gt;&gt;</mat-option>
                     <mat-option *ngFor="let item of usuarioFiltro" [value]="item">
                         {{item?.nome}}
                     </mat-option>

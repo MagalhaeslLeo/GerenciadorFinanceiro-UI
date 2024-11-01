@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import 'ngx-toastr/toastr';
-@import 'theme.scss';
-@import 'material.scss';
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
-@import 'material-icons/iconfont/material-icons.css';
-@import 'material-icons/iconfont/material-icons.scss';
+// @import 'ngx-toastr/toastr';
+// @import 'theme.scss';
+// @import 'material.scss';
+// @import "primeng/resources/themes/lara-light-blue/theme.css";
+// @import "primeng/resources/primeng.css";
+// @import 'material-icons/iconfont/material-icons.css';
+// @import 'material-icons/iconfont/material-icons.scss';
 
 
 html, body { height: 100%; }
@@ -20,12 +20,12 @@ $material-icons-font-size: 48px !default;
 $material-icons-font-display: block !default;
 
 //Cores padrão
-$azul-primario: #3B4675;
-$azul-secundario: #747DA6;
+$azul-primario: #1b685e;
+$azul-secundario: #0c8a9b;
 $azul-terciario: #DEE4FF;
 
 .mat-mdc-raised-button.mat-primary{
-  --mdc-protected-button-container-color: #3B4675;
+  --mdc-protected-button-container-color: #075a4c;
 }
 
 .p-button{
@@ -133,10 +133,10 @@ cabecalhotabelacrudcustom{
   }
 }
 
-.desenv-style{
-  background-image:url("assets/images/bg-desenv.png") !important;
+// .desenv-style{
+//   background-image:url("assets/images/bg-desenv.png") !important;
  
-}
+// }
 
 .processo{
    
@@ -189,7 +189,7 @@ cabecalhotabelacrudcustom{
 
 .ente{
   .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-text-field__input{
-    border-color: blue;
+    border-color: rgb(0, 238, 255);
     height: 50px;
   }
 }
@@ -218,12 +218,12 @@ cabecalhotabelacrudcustom{
   /* Adiciona o cursor de link */
   transform: translateY(-50%);
   font-size: 23px;
-  color: rgba(0, 0, 0, 0.54);
+  color: rgba(2, 117, 121, 0.54);
 }
 
 .custom-select .dropdown-icon svg {
   height: 1em;
-  fill: currentColor;
+  // fill: currentColor;
 }
 
 .custom-select mat-form-field {
