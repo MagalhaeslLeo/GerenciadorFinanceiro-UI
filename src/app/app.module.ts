@@ -13,11 +13,11 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { SharedModule } from './shared/shared.module';
 import { EnvService } from './core/env.service';
 import { User } from './core/user';
 import { Utils } from './core/utils';
 import { ServiceUtil } from './core/serviceUtil';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
  
 @NgModule({
   declarations: [
@@ -36,8 +36,7 @@ import { ServiceUtil } from './core/serviceUtil';
     MatDividerModule,
     MatButtonModule,
     MatAutocompleteModule,
-    ReactiveFormsModule,
-    SharedModule
+    ReactiveFormsModule
  
    
   ],
@@ -45,7 +44,10 @@ import { ServiceUtil } from './core/serviceUtil';
     EnvService,
     User,
     Utils,
-    ServiceUtil
+    ServiceUtil,
+    {provide: MatDialog, useValue: {}},
+    {provide: MAT_DIALOG_DATA, useValue: {}},
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {hasBackDrop: true}}
   ],
   bootstrap: [AppComponent]
 })

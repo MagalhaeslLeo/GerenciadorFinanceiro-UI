@@ -13,6 +13,7 @@ import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { SharedModule } from "src/app/shared/shared.module";
 // import { PickListModule } from 'primeng/picklist';
 
 
@@ -35,7 +36,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
         MatTooltipModule,
         MatDividerModule,
         MatAutocompleteModule,
-        FlexLayoutModule
+        FlexLayoutModule,
+        SharedModule
         // PickListModule
      ],
     providers: []

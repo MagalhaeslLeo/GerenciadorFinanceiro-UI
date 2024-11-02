@@ -14,8 +14,8 @@ export class ServiceBase{
 
     constructor(private http: HttpClient){}
     //Área de metódos
-    get<T>(endpoint : string): Observable<T>{
-        return this.http.get<T>(`${this.url}/${endpoint}`);
+    get<T>(endpoint : string, pParametro?: {[chave: string]:any}): Observable<T>{
+        return this.http.get<T>(`${this.url}/${endpoint}`, pParametro);
     } 
     post<T>(endpoint : string, body : any) : Observable<T> {
         return this.http.post<T>(`${this.url}/${endpoint}`, body, {headers: this.header})
@@ -23,7 +23,7 @@ export class ServiceBase{
     put<T>(endpoint : string, body : any) : Observable<T> {
         return this.http.put<T>(`${this.url}/${endpoint}`, body, {headers: this.header})
     }
-    delete<T>(endpoint : string): Observable<T>{
+    delete<T>(endpoint : string, pParametro: {[chave: string]: any}): Observable<T>{
         return this.http.delete<T>(`${this.url}/${endpoint}`);
     } 
 }

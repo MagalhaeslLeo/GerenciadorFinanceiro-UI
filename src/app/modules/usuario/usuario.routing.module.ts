@@ -9,18 +9,18 @@ const routes: Routes = [
         // canActivate: [AuthGuard]
 
     },
-    // {
-    //     path: "det",
-    //      component: UsuarioListaPage,
-    //     // canActivate: [AuthGuard]
+     {
+        path: "det",
+          component: UsuarioListaPage,
+         // canActivate: [AuthGuard]
 
-    // },
-    // {
-    //     path: "det/:idRegistro",
-    //      component: UsuarioListaPage,
-    //     // canActivate: [AuthGuard]
+     },
+     {
+         path: "det/:idRegistro",
+          component: UsuarioListaPage,
+         // canActivate: [AuthGuard]
 
-    // }
+     }
 ];
 @NgModule({
     imports: [RouterModule.forChild(routes)],
